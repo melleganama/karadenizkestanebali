@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html style="font-size: 16px;" lang="tr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords"
+    content="​Find yourself outside, ​Get more people outside, ​Move with purposeful urgency., ​Camping near hot springs, Unique camping, ​Build resilient communities, ​Find your next getaway, Contact Us, INTUITIVE">
+  <meta name="description" content="">
+  <title>Home</title>
+
+  <link rel="stylesheet" href="{% static 'home/css/nicepage.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'home/css/index.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'home/css/contact.css' %}">
+
+  <script class="u-script" type="text/javascript" src="{% static 'home/js/jquery.js' %}" defer=""></script>
+  <script class="u-script" type="text/javascript" src="{% static 'home/js/nicepage.js' %}" defer=""></script>
+
+  <meta name="generator" content="Nicepage 5.13.1, nicepage.com">
+  <meta name="referrer" content="origin">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+</head>
+
+<body data-home-page="Giriş.html" data-home-page-title="Giriş" class="u-body u-xl-mode" data-lang="tr">
+
+    {% include "home/navbar.html"%}
+
+    {% block content %}{% endblock content %}
+
+
+    {% include "home/footer.html" %}
+ 
+
+</body>
+
+</html>

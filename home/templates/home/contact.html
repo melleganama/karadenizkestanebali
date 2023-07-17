@@ -1,0 +1,66 @@
+{% extends 'home/layout.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+{% if messages %}
+
+  {% for message in messages %}
+    <div class="alert alert-success">
+      {{ message }}
+      <a href="#" class="close"></a>
+    </div>
+  {% endfor%}
+
+
+{% endif %}
+
+
+<section class="u-clearfix u-image u-shading u-section-7" id="carousel_2841" data-image-width="1620"
+data-image-height="1080">
+<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+  <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+    <div class="u-layout">
+      <div class="u-layout-row">
+        <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1"
+          data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+          <div class="u-container-layout u-valign-middle u-container-layout-1">
+            <h2 class="u-text u-text-1">Bize Ulaşın!</h2>
+            <p class="u-text u-text-body-alt-color u-text-2">Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+          </div>
+        </div>
+
+
+        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2"
+          data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+          <div class="u-container-layout u-valign-middle u-container-layout-2">
+            <div class="u-form u-form-1">
+
+              <form method="POST">
+                {% csrf_token %}
+                {{ form | crispy}}
+
+                <button type="submit" class="u-active-white u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-50 u-text-active-black u-text-hover-black u-btn-2">Gönder
+                </button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+{% endblock content %}
